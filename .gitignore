@@ -9,6 +9,9 @@ release.properties
 # Application configuration containing secrets
 src/main/resources/application.properties
 
+# Local test database credentials
+src/test/resources/application-test.properties
+
 # Java compiled files
 *.class
 *.jar
