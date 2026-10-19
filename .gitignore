@@ -8,11 +8,26 @@ release.properties
 
 # Application configuration containing secrets
 src/main/resources/application.properties
-
-# Local test database credentials
 src/test/resources/application-test.properties
+application-local.properties
+application-prod.properties
 
-# Java compiled files
+# Allow safe example configuration files
+!src/main/resources/application.example.properties
+!src/test/resources/application-test.example.properties
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Database backups and dumps
+*.dump
+*.backup
+*.bak
+*.sql
+
+# Java compiled files and archives
 *.class
 *.jar
 *.war
@@ -41,14 +56,6 @@ desktop.ini
 *.log
 logs/
 
-# Environment variables and secrets
-.env
-.env.*
-!.env.example
-application-local.properties
-application-prod.properties
-
-# Temporary files
+# Temporary and editor files
 *.tmp
 *.swp
-*.bak
